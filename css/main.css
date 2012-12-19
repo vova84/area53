@@ -1,221 +1,249 @@
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 html,
 button,
 input,
 select,
 textarea {
-    color: #222;
-}
+  color: #222; }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
-}
+  font-family: 'open_sansregular';
+  font-size: 62.5%;
+  line-height: 1;
+  background: url(../img/body.png) 0 0 repeat; }
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+  background: #b3d4fc;
+  text-shadow: none; }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+  background: #b3d4fc;
+  text-shadow: none; }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
 img {
-    vertical-align: middle;
-}
+  vertical-align: middle; }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 textarea {
-    resize: vertical;
-}
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
+  resize: vertical; }
 
 /* ==========================================================================
-   Author's custom styles
+   Modiles
    ========================================================================== */
+.wrap {
+  width: 94%;
+  margin: 0 auto; }
 
+.saitinfo {
+  background-color: #313131;
+  height: 3em; }
 
+.saitinfo a {
+  color: #e6e4e4;
+  font-size: 1.2em;
+  float: right;
+  line-height: 30px;
+  padding-left: 31px;
+  background: url(../img/header-sprait.png) 0 0 no-repeat; }
 
+.saitinfo a[href^="mail"] {
+  float: left;
+  background-position: 0 -31px; }
 
+.mainmenu {
+  overflow: hidden;
+  background-color: green; }
 
-
-
-
-
-
-
-
-
-
-
+/* ==========================================================================
+   My styles
+   ========================================================================== */
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-
-}
-
+@media only screen and (min-width: 1480px) {
+  .wrap {
+    width: 1400px; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
 
 .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
-}
+  display: none !important;
+  visibility: hidden; }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
 .invisible {
-    visibility: hidden;
-}
+  visibility: hidden; }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
-}
+  content: " ";
+  display: table; }
 
 .clearfix:after {
-    clear: both;
-}
+  clear: both; }
 
 .clearfix {
-    *zoom: 1;
-}
+  *zoom: 1; }
+
+/* ==========================================================================
+   column styles
+   ========================================================================== */
+[class^="col"] {
+  float: left;
+  margin-left: 0.840336134454%;
+  background: red;
+  height: 100px; }
+
+[class^="col"]:first-child {
+  margin-left: 0; }
+
+.col-1 {
+  width: 5.46218%; }
+
+.col-2 {
+  width: 11.76471%; }
+
+.col-3 {
+  width: 18.06723%; }
+
+.col-4 {
+  width: 24.36975%; }
+
+.col-5 {
+  width: 30.67227%; }
+
+.col-6 {
+  width: 36.97479%; }
+
+.col-7 {
+  width: 43.27731%; }
+
+.col-8 {
+  width: 49.57983%; }
+
+.col-9 {
+  width: 55.88235%; }
+
+.col-10 {
+  width: 62.18487%; }
+
+.col-11 {
+  width: 68.48739%; }
+
+.col-12 {
+  width: 74.78992%; }
+
+.col-13 {
+  width: 81.09244%; }
+
+.col-14 {
+  width: 87.39496%; }
+
+.col-15 {
+  width: 93.69748%; }
 
 /* ==========================================================================
    Print styles
    ========================================================================== */
-
 @media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline; }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
 
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
+  tr,
+  img {
+    page-break-inside: avoid; }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  img {
+    max-width: 100% !important; }
 
-    img {
-        max-width: 100% !important;
-    }
+  @page {
+    margin: 0.5cm; }
 
-    @page {
-        margin: 0.5cm;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
+  h2,
+  h3 {
+    page-break-after: avoid; } }

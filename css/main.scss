@@ -1,7 +1,13 @@
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
 html,
 button,
 input,
@@ -11,8 +17,10 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-family: 'open_sansregular';
+    font-size: 62.5%;
+    line-height: 1;
+    background: url(../img/body.png) 0 0 repeat;
 }
 
 ::-moz-selection {
@@ -48,16 +56,42 @@ textarea {
     resize: vertical;
 }
 
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+/* ==========================================================================
+   Modiles
+   ========================================================================== */
+
+   .wrap{
+       width:94%;
+       margin: 0 auto;
+   }
+   .saitinfo{
+       background-color: #313131;
+       height:3em;
+   }
+   .saitinfo a{
+       color: #e6e4e4;
+       font-size: 1.2em;
+       float: right;
+       line-height: 30px;
+       padding-left: 31px;
+       background: url(../img/header-sprait.png) 0 0 no-repeat;
+   }
+   .saitinfo a[href^="mail"]{
+       float: left;
+       background-position: 0 -31px;
+   }
+   .saitinfo a:hover{
+       
+   }
+   .mainmenu{
+       overflow: hidden;
+       background-color: green;
+   }
+
 
 
 /* ==========================================================================
-   Author's custom styles
+   My styles
    ========================================================================== */
 
 
@@ -78,9 +112,22 @@ textarea {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 480px) {
+    
 
 }
+
+@media only screen and (min-width: 768px) {
+    
+
+}
+
+@media only screen and (min-width: 1480px) {
+    .wrap{
+        width: 1400px;   
+    }
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
@@ -148,6 +195,41 @@ textarea {
 .clearfix {
     *zoom: 1;
 }
+
+/* ==========================================================================
+   column styles
+   ========================================================================== */
+ 
+   $width_all: 1190;
+   $width_one: 65;
+   $margin_left: 10;
+
+   [class^="col"]{
+       float: left;
+       margin-left: 0.840336134454%;
+       background:red;
+       height: 100px;
+   }
+   [class^="col"]:first-child{
+       
+       margin-left: 0;
+   }
+
+  .col-1{width:($width_one*1)*100%/$width_all;}
+  .col-2{width:($width_one*2 + $margin_left*1)*100%/$width_all;}
+  .col-3{width:($width_one*3 + $margin_left*2)*100%/$width_all;}
+  .col-4{width:($width_one*4 + $margin_left*3)*100%/$width_all;}
+  .col-5{width:($width_one*5 + $margin_left*4)*100%/$width_all;}
+  .col-6{width:($width_one*6 + $margin_left*5)*100%/$width_all;}
+  .col-7{width:($width_one*7 + $margin_left*6)*100%/$width_all;}
+  .col-8{width:($width_one*8 + $margin_left*7)*100%/$width_all;}
+  .col-9{width:($width_one*9 + $margin_left*8)*100%/$width_all;}
+  .col-10{width:($width_one*10 + $margin_left*9)*100%/$width_all;}
+  .col-11{width:($width_one*11 + $margin_left*10)*100%/$width_all;}
+  .col-12{width:($width_one*12 + $margin_left*11)*100%/$width_all;}
+  .col-13{width:($width_one*13 + $margin_left*12)*100%/$width_all;}
+  .col-14{width:($width_one*14 + $margin_left*13)*100%/$width_all;}
+  .col-15{width:($width_one*15 + $margin_left*14)*100%/$width_all;}
 
 /* ==========================================================================
    Print styles
