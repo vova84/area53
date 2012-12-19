@@ -8,6 +8,19 @@
     font-style: normal;
 
 }
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+$blue_link: #699dcf; /*ссылки синеватого оттенка*/
+$red_link: #df4d28; /*ссылки красноватого оттенка*/
+$img_path: '../img/'; /*путь до картинок от css*/
+
+/* ==========================================================================
+   Basic styles
+   ========================================================================== */
+
 html,
 button,
 input,
@@ -20,7 +33,7 @@ body {
     font-family: 'open_sansregular';
     font-size: 62.5%;
     line-height: 1;
-    background: url(../img/body.png) 0 0 repeat;
+    background: url($img_path + 'body.png') 0 0 repeat;
 }
 
 ::-moz-selection {
@@ -56,6 +69,9 @@ textarea {
     resize: vertical;
 }
 
+
+
+
 /* ==========================================================================
    Modiles
    ========================================================================== */
@@ -83,11 +99,36 @@ textarea {
    .saitinfo a:hover{
        
    }
-   .mainmenu{
-       overflow: hidden;
-       background-color: green;
+   .top{
+       header{
+           position: relative;
+           width:100%;
+           height: 186px;
+           a{
+               background: url($img_path + 'logo.png') 0 0 no-repeat;
+               display: block;
+               width: 384px;
+               height: 108px;
+               position: absolute;
+               left: 50%;
+               margin-left: -192px;
+               top: 25px;
+           }
+           h1{
+               position: absolute;
+               bottom: 18px;
+               left: 5px;
+               color: #878787;
+               font-size: 2.4em;
+               font-weight: normal;
+               strong{
+                   color: $blue_link;
+                   font-weight: normal;
+               }
+           }
+       }
    }
-
+   
 
 
 /* ==========================================================================
@@ -207,11 +248,9 @@ textarea {
    [class^="col"]{
        float: left;
        margin-left: 0.840336134454%;
-       background:red;
-       height: 100px;
    }
-   [class^="col"]:first-child{
-       
+
+   [class^="col"]:first-child{      
        margin-left: 0;
    }
 

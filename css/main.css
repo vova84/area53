@@ -5,6 +5,15 @@
   font-weight: normal;
   font-style: normal; }
 
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/*ссылки синеватого оттенка*/
+/*ссылки красноватого оттенка*/
+/*путь до картинок от css*/
+/* ==========================================================================
+   Basic styles
+   ========================================================================== */
 html,
 button,
 input,
@@ -16,7 +25,7 @@ body {
   font-family: 'open_sansregular';
   font-size: 62.5%;
   line-height: 1;
-  background: url(../img/body.png) 0 0 repeat; }
+  background: url("../img/body.png") 0 0 repeat; }
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -68,9 +77,29 @@ textarea {
   float: left;
   background-position: 0 -31px; }
 
-.mainmenu {
-  overflow: hidden;
-  background-color: green; }
+.top header {
+  position: relative;
+  width: 100%;
+  height: 186px; }
+  .top header a {
+    background: url("../img/logo.png") 0 0 no-repeat;
+    display: block;
+    width: 384px;
+    height: 108px;
+    position: absolute;
+    left: 50%;
+    margin-left: -192px;
+    top: 25px; }
+  .top header h1 {
+    position: absolute;
+    bottom: 18px;
+    left: 5px;
+    color: #878787;
+    font-size: 2.4em;
+    font-weight: normal; }
+    .top header h1 strong {
+      color: #699dcf;
+      font-weight: normal; }
 
 /* ==========================================================================
    My styles
@@ -138,9 +167,7 @@ textarea {
    ========================================================================== */
 [class^="col"] {
   float: left;
-  margin-left: 0.840336134454%;
-  background: red;
-  height: 100px; }
+  margin-left: 0.840336134454%; }
 
 [class^="col"]:first-child {
   margin-left: 0; }
