@@ -63,7 +63,9 @@ textarea {
 
 .saitinfo {
   background-color: #313131;
-  height: 3em; }
+  height: 3em;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75); }
 
 .saitinfo a {
   color: #e6e4e4;
@@ -93,13 +95,46 @@ textarea {
   .top header h1 {
     position: absolute;
     bottom: 18px;
-    left: 5px;
+    left: 6.30252%;
     color: #878787;
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-weight: normal; }
     .top header h1 strong {
       color: #699dcf;
-      font-weight: normal; }
+      font-weight: bold; }
+
+.mainmenu {
+  width: 99%;
+  margin: 0 auto; }
+  .mainmenu ul {
+    width: 100%;
+    background: #fafafa;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2YzZjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f3f3f3));
+    background: -webkit-linear-gradient(top, #f7f7f7 0%, #f3f3f3 100%);
+    background: -o-linear-gradient(top, #f7f7f7 0%, #f3f3f3 100%);
+    background: -ms-linear-gradient(top, #f7f7f7 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%, #f3f3f3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f3f3f3',GradientType=0 );
+    padding-left: 0;
+    border: 1px solid #ededed;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(194, 194, 194, 0.75);
+    box-shadow: 0 1px 1px rgba(194, 194, 194, 0.75); }
+  .mainmenu li {
+    float: left;
+    width: 30%; }
+    .mainmenu li a {
+      float: left;
+      display: block;
+      color: #7a7a7a;
+      font-size: 2em;
+      font-variant: small-caps;
+      text-align: center;
+      width: 100%;
+      line-height: 2.7em; }
 
 /* ==========================================================================
    My styles
@@ -107,6 +142,12 @@ textarea {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 768px) {
+  .mainmenu ul {
+    width: 92%;
+    padding-left: 8%; }
+    .mainmenu ul li {
+      width: 15%; } }
 @media only screen and (min-width: 1480px) {
   .wrap {
     width: 1400px; } }
