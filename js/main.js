@@ -20,14 +20,12 @@
 	$('.search input[type="submit"]').attr('value','поиск');
 
 	// скрываем и показываем поиск
-
+	$('.search').css({'z-index':'1'});
 
 	$('.search-switcher').toggle(function() {
-		  $('.search').stop('true','true').fadeIn();
-		  $('.search').css({'z-index':'1'});
+		  $('.search').stop('true','true').fadeIn();		  
 		},function(){
-			$('.search').stop('true','true').fadeOut();
-			$('.search').css({'z-index':'-1'});
+			$('.search').stop('true','true').fadeOut();	
 		});
 
 

@@ -20,6 +20,16 @@ $width_all: 1190;
 $width_one: 65;
 $margin_left: 10;
 
+ [class^="col"]{
+       float: left;
+       margin-left: 0.840336134454%;
+   }
+
+   [class^="col"]:first-child{      
+       margin-left: 0;
+   }
+
+
 /* ==========================================================================
    Basic styles
    ========================================================================== */
@@ -141,6 +151,9 @@ textarea {
        position: relative;
        ul{
            width: 100%;
+           -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+                   box-sizing: border-box;
            background: #fafafa;
             background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmM2YzZjMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
             background: -moz-linear-gradient(top,  #f7f7f7 0%, #f3f3f3 100%);
@@ -161,7 +174,7 @@ textarea {
            width: 100%;
            a{
                display: block;
-               color: #7a7a7a;
+               color: #6a6a6a;
                font-size: 1.9em;
                font-variant: small-caps;
                text-align: center;
@@ -186,7 +199,7 @@ textarea {
    .search{
      width: 258px;
      height: 41px;
-     line-height: 38px;
+     line-height: 40px;
       display: none; 
     vertical-align: middle;
      border: 1px solid #e4e4e4;
@@ -206,6 +219,8 @@ textarea {
         width: 182px;
         height: 32px;
         vertical-align: middle;
+        font-size: 1.6em;
+        color: #6a6a6a;
       }
       input[type="submit"]{
         color: $blue_link;
@@ -231,13 +246,21 @@ textarea {
   background: url($img_path +'header-sprait.png') 0 -98px no-repeat;
 }
 
+.col-10{
+ background: red;
+  height:500px; 
+}
+.col-5{
+  background: red;
+  height: 500px;
+}
+.col-10 article img{
+  max-width: 100%;
+}
 
       
 
 
-/* ==========================================================================
-   My styles
-   ========================================================================== */
 
 
 
@@ -254,6 +277,11 @@ textarea {
 
 
 /* ==========================================================================
+   ==========================================================================
+   ==========================================================================
+   ==========================================================================
+   ==========================================================================
+   ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -261,11 +289,23 @@ textarea {
 
 
 }
+
 @media only screen and (max-width: 679px) {
+
    .mainmenu{
 
      ul{
        display: none;
+       li a{
+         border-bottom: 1px solid #e2e2e2;
+         -webkit-box-shadow:  0 1px 1px #fff;
+                 box-shadow:  0 1px 1px #fff;
+       }
+       li:last-child a{
+         border: 0;
+         -webkit-box-shadow: none;
+                 box-shadow: none;
+       }
      }
      .search{
        display: none;
@@ -306,7 +346,7 @@ textarea {
   
 }   
 .mainmenu{
-       width:99%;
+       width:100%;
        margin: 0 auto;
        position: relative;
        .search{
@@ -339,12 +379,7 @@ textarea {
            a{
                float: left;
                position: relative;
-               display: block;
-               color: #7a7a7a;
-               font-variant: small-caps;
-               text-align: center;
-               width:100%;
-               line-height: 2.7em;
+
                &:hover{
                  color: $blue_link;
                }
@@ -378,10 +413,18 @@ textarea {
    }
 }
 
+@media only screen and (max-width: 768px) {
+
+  .content [class^="col"]{
+       float: none;
+       margin-left: 0;
+       width: 100%;
+   }
+}
 
 @media only screen and (min-width: 768px) {
     .mainmenu ul{
-        width: 92%;
+        width: 100%;
         padding-left: 8%;
         li{
             width: 15%;
@@ -390,6 +433,10 @@ textarea {
                  visibility: visible;
                }
         }
+    }
+
+    .lt-ie9 .mainmenu ul{
+      width: 92%;
     }
 
 }
@@ -474,15 +521,7 @@ textarea {
  
    
 
-   [class^="col"]{
-       float: left;
-       margin-left: 0.840336134454%;
-   }
-
-   [class^="col"]:first-child{      
-       margin-left: 0;
-   }
-
+  
   .col-1{width:($width_one*1)*100%/$width_all;}
   .col-2{width:($width_one*2 + $margin_left*1)*100%/$width_all;}
   .col-3{width:($width_one*3 + $margin_left*2)*100%/$width_all;}
@@ -498,6 +537,8 @@ textarea {
   .col-13{width:($width_one*13 + $margin_left*12)*100%/$width_all;}
   .col-14{width:($width_one*14 + $margin_left*13)*100%/$width_all;}
   .col-15{width:($width_one*15 + $margin_left*14)*100%/$width_all;}
+
+  .modifer-1{margin-left:($width_one*1 + $margin_left*2)*100%/$width_all;}
 
 /* ==========================================================================
    Print styles
