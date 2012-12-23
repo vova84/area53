@@ -32,7 +32,11 @@ body {
   font-family: 'open_sansregular';
   font-size: 62.5%;
   line-height: 1;
-  background: url("../img/body.png") 0 0 repeat; }
+  background: url("../img/body.png") 0 0 repeat;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative; }
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -65,7 +69,7 @@ textarea {
    Modiles
    ========================================================================== */
 .wrap {
-  width: 94%;
+  width: 90%;
   min-width: 320px;
   margin: 0 auto; }
 
@@ -141,7 +145,7 @@ textarea {
     box-shadow: 0 1px 1px rgba(194, 194, 194, 0.75); }
   .mainmenu li {
     width: 100%; }
-    .mainmenu li a {
+    .mainmenu li a:link, .mainmenu li a:visited {
       display: block;
       color: #6a6a6a;
       font-size: 1.9em;
@@ -155,8 +159,10 @@ textarea {
       -ms-transition: color .2s ease-in;
       -o-transition: color .2s ease-in;
       transition: color .2s ease-in; }
-      .mainmenu li a:hover {
+      .mainmenu li a:link:hover, .mainmenu li a:visited:hover {
         color: #699dcf; }
+      .mainmenu li a:link:active, .mainmenu li a:visited:active {
+        color: #547ea6; }
     .mainmenu li.current a {
       color: #699dcf; }
 
@@ -207,16 +213,177 @@ textarea {
   bottom: 0;
   background: url("../img/header-sprait.png") 0 -98px no-repeat; }
 
-.col-10 {
-  background: red;
-  height: 500px; }
+/************** prev articles styles ******************/
+.sec-heading {
+  margin: 40px 0 35px 0;
+  color: #868686;
+  font-size: 2.4em;
+  font-weight: normal;
+  font-variant: small-caps;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  -webkit-box-shadow: 0 1px 0px #fff;
+  box-shadow: 0 1px 0px #fff; }
 
-.col-5 {
-  background: red;
-  height: 500px; }
+.post-item {
+  margin-top: 35px; }
+
+.post-item h2 a {
+  color: #3b3b3b;
+  font-size: 2.4em;
+  font-weight: normal; }
+  .post-item h2 a:hover {
+    color: #699dcf; }
+  .post-item h2 a:active {
+    color: #547ea6; }
+
+.post-item header p {
+  color: #818181;
+  font-size: 1.2em;
+  font-style: italic;
+  padding: 10px 0 15px 0; }
+  .post-item header p span {
+    color: #e04d28; }
+
+.prev-article h3 {
+  color: #5f5f5f;
+  font-weight: normal;
+  font-size: 1.8em;
+  margin-bottom: 15px; }
+.prev-article img {
+  border: 2px solid #E4E4E4; }
+.prev-article p {
+  color: #404040;
+  font-size: 1.7em;
+  line-height: 24px;
+  font-family: Arial, sans-serif;
+  margin: 15px 0; }
+
+.prev-info a {
+  color: #699dcf;
+  font-size: 1.4em;
+  font-family: Arial, sans-serif; }
+  .prev-info a:hover {
+    color: #df4d28; }
+  .prev-info a:active {
+    color: #c84d2f; }
+  .prev-info a:first-child {
+    border-right: 1px solid #3b3b3b;
+    padding-right: 5px;
+    margin-right: 5px; }
 
 .col-10 article img {
   max-width: 100%; }
+
+/****************   aside styles    *************************/
+.col-5 li a {
+  color: #699dcf;
+  font-size: 1.6em; }
+  .col-5 li a:hover {
+    color: #df4d28; }
+  .col-5 li a:active {
+    color: #c84d2f; }
+
+.col-5 li {
+  margin: 18px 0; }
+
+.lates-comments img {
+  float: left;
+  margin-right: 10px; }
+
+.lates-comments li {
+  clear: both;
+  margin-bottom: 15px;
+  overflow: hidden; }
+
+.lates-comments time {
+  color: #818181;
+  font-size: 1.3em;
+  font-family: Arial, sans-serif;
+  font-style: italic; }
+
+.lates-comments p {
+  color: #505050;
+  font-size: 1.3em;
+  margin-top: 5px;
+  line-height: 1.2;
+  display: block; }
+
+.latest-news {
+  clear: both; }
+
+.latest-news time {
+  color: #818181;
+  font-size: 1.5em;
+  font-family: Arial, sans-serif;
+  font-style: italic; }
+
+.latest-news p a {
+  color: #699dcf;
+  font-size: 1.5em;
+  margin-top: 8px;
+  line-height: 1.2;
+  display: block; }
+
+.follow-us li {
+  margin-top: -10px;
+  width: 70px;
+  height: 60px;
+  float: left; }
+  .follow-us li a {
+    display: block;
+    width: 70px;
+    height: 60px;
+    text-indent: -9000px;
+    background: url("../img/social.png") 50% 0 no-repeat; }
+  .follow-us li:nth-child(1) a {
+    background-position: 50% -60px; }
+  .follow-us li:nth-child(3) a {
+    background-position: 50% -120px; }
+  .follow-us li:nth-child(4) a {
+    background-position: 50% -180px; }
+
+.latest-saits {
+  clear: both; }
+
+.read-all:link, .read-all:visited {
+  color: #df4d28;
+  font-size: 1.4em;
+  font-family: Arial, sans-serif; }
+  .read-all:link:hover, .read-all:visited:hover {
+    color: #699dcf;
+    text-decoration: underline; }
+  .read-all:link:active, .read-all:visited:active {
+    color: #c84d2f; }
+
+.latest-saits img {
+  border: 2px solid #699dcf; }
+  .latest-saits img:hover {
+    border: 2px solid #df4d28; }
+
+.latest-saits li {
+  display: inline-block;
+  margin: 0px 10px 18px 0; }
+
+.latest-saits li a {
+  display: inline-block; }
+
+/****************  footer ********************/
+.helper {
+  height: 7.6em;
+  clear: both; }
+
+.all {
+  padding-bottom: 57.7em;
+  overflow: hidden; }
+
+.footer {
+  height: 57.7em;
+  background: #000;
+  clear: both;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
 
 /* ==========================================================================
    ==========================================================================
@@ -226,6 +393,9 @@ textarea {
    ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 480px) {
+  .wrap {
+    width: 90%; } }
 @media only screen and (max-width: 679px) {
   .mainmenu ul {
     display: none; }
@@ -336,9 +506,12 @@ textarea {
 
   .lt-ie9 .mainmenu ul {
     width: 92%; } }
-@media only screen and (min-width: 1480px) {
+@media only screen and (min-width: 960px) {
   .wrap {
-    width: 1400px; } }
+    width: 80%; } }
+@media only screen and (min-width: 1320px) {
+  .wrap {
+    width: 120em; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
