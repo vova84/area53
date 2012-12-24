@@ -370,7 +370,7 @@ textarea {
 
 /****************  footer ********************/
 .helper {
-  height: 7.6em;
+  height: 11.6em;
   clear: both; }
 
 .all {
@@ -379,11 +379,112 @@ textarea {
 
 .footer {
   height: 57.7em;
-  background: #000;
+  background: #313131;
+  border-top: 6px solid #c9c8c8;
   clear: both;
   width: 100%;
   position: absolute;
   bottom: 0; }
+
+.top-footer {
+  margin: 53px 0;
+  overflow: hidden; }
+  .top-footer p {
+    font-size: 1.3em;
+    color: #d7d7d7;
+    margin-top: 15px;
+    line-height: 1.5em; }
+    .top-footer p a {
+      color: #858585; }
+      .top-footer p a:hover {
+        color: #fff; }
+  .top-footer ul {
+    margin-top: 15px; }
+    .top-footer ul li {
+      overflow: hidden;
+      margin-bottom: 15px; }
+      .top-footer ul li time {
+        color: #d7d7d7;
+        font-size: 1.3em;
+        font-family: Arial, sans-serif;
+        font-style: italic;
+        line-height: 3em; }
+      .top-footer ul li a {
+        color: #fefefe;
+        font-size: 1.3em; }
+      .top-footer ul li img {
+        float: left;
+        margin-right: 10px; }
+  .top-footer form input {
+    border: 2px solid #4d4d4d;
+    display: block;
+    width: 80%;
+    height: 34px;
+    margin-bottom: 15px;
+    background: #424242;
+    font-size: 1.4em;
+    color: #9b9a9a;
+    padding-left: 10px; }
+  .top-footer form textarea {
+    width: 80%;
+    padding-left: 10px;
+    background: #424242;
+    font-size: 1.4em;
+    color: #9b9a9a;
+    border: 2px solid #4d4d4d;
+    min-height: 116px;
+    margin-bottom: 15px; }
+  .top-footer form input[type="submit"] {
+    background: #292929;
+    width: 122px;
+    height: 35px;
+    color: #686868;
+    font-size: 1.3em;
+    vertical-align: middle;
+    border: 0; }
+
+.top-footer h3 {
+  color: #ebeaea;
+  font-size: 2.6em;
+  font-variant: small-caps;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 0 1px 0 #484848;
+  box-shadow: 0 1px 0 #484848; }
+
+.bottom-footer {
+  clear: both;
+  border-top: 1px solid #000;
+  -webkit-box-shadow: 0 1px 0 #484848;
+  box-shadow: 0 1px 0 #484848; }
+  .bottom-footer nav {
+    margin-top: 35px;
+    overflow: hidden; }
+  .bottom-footer nav li {
+    float: left;
+    border-right: 1px solid #4e4e4e;
+    padding-right: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 10px; }
+    .bottom-footer nav li:last-child {
+      padding-right: 0px;
+      margin-right: 0px;
+      border-right: 0; }
+    .bottom-footer nav li a {
+      color: #e0dfdf;
+      font-size: 13px;
+      float: left; }
+  .bottom-footer small {
+    font-size: 1.3em;
+    color: #d7d7d7;
+    display: inline-block;
+    margin-top: 35px; }
+  .bottom-footer .logo-block {
+    height: 52px;
+    background: url("../img/logo-small.png") 50% 0 no-repeat;
+    margin-top: 35px; }
 
 /* ==========================================================================
    ==========================================================================
@@ -493,7 +594,23 @@ textarea {
   .content [class^="col"] {
     float: none;
     margin-left: 0;
-    width: 100%; } }
+    width: 100%; }
+
+  .footer [class^="col"] {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .footer {
+    height: auto;
+    position: static; }
+
+  .helper {
+    height: 0; }
+
+  .all {
+    padding-bottom: 5em; } }
 @media only screen and (min-width: 768px) {
   .mainmenu ul {
     width: 100%;
@@ -506,6 +623,12 @@ textarea {
 
   .lt-ie9 .mainmenu ul {
     width: 92%; } }
+@media only screen and (max-width: 1200px) {
+  .top-footer form input {
+    width: 96%; }
+
+  .top-footer form textarea {
+    width: 96%; } }
 @media only screen and (min-width: 960px) {
   .wrap {
     width: 80%; } }
