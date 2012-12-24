@@ -148,7 +148,7 @@ textarea {
                font-weight: normal;
                strong{
                    color: $blue_link;
-                   font-weight: bold;
+                   font-weight: normal;
                }
            }
        }
@@ -185,6 +185,7 @@ textarea {
                font-size: 1.9em;
                font-variant: small-caps;
                text-align: center;
+               font-weight: normal;
                width:100%;
                line-height: 2.7em;
                text-shadow: 0 1px 1px #fff;
@@ -455,7 +456,7 @@ textarea {
   overflow: hidden;
 }
 .footer{
-  height: 57.7em;
+  min-height: 57.7em;
   background: #313131;
   border-top: 6px solid #c9c8c8;
   clear: both;
@@ -464,7 +465,7 @@ textarea {
   bottom: 0;
 }
 .top-footer{
-  margin: 53px 0;
+  padding: 53px 0;
   overflow: hidden;
   p{
     font-size: 1.3em;
@@ -538,6 +539,7 @@ textarea {
     font-size: 2.6em;
     font-variant: small-caps;
     border-bottom: 1px solid #000;
+    font-weight: normal;
     padding-bottom: 15px;
     margin-bottom: 25px;
     -webkit-box-shadow:  0 1px 0 #484848;
