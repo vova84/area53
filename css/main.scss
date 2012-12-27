@@ -484,6 +484,49 @@ aside .category,aside .lates-comments,aside .archive,aside .follow-us,aside .lat
 aside .archive{
   background:#fff url($img_path + 'archive.png') 80% 60% no-repeat;
 }
+aside .category ul{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+  li{
+    margin: 8px 0;
+    background-color: #f2f2f2;
+    border: 1px solid #e8e7e6;
+    
+    a{
+      display: block;
+      color: #9a9a9b;
+      font-size: 1.6em;
+      padding: 15px 0 15px 60px;
+      background-image: url($img_path + 'category-sprait.png');
+      background-repeat: no-repeat;
+      background-position: 5px 5px;
+      -webkit-transition: all .3s linear;
+         -moz-transition: all .3s linear;
+          -ms-transition: all .3s linear;
+           -o-transition: all .3s linear;
+              transition: all .3s linear;
+      &:hover{
+        background-color: rgba(255,255,255,.7);
+      }
+    }
+    &:nth-child(2) a{
+      background-position: 5px -52px;
+    }
+    &:nth-child(3) a{
+      background-position: 5px -111px;
+    }
+    &:nth-child(4) a{
+      background-position: 5px -169px;
+    }
+    &:nth-child(5) a{
+      background-position: 5px -229px;
+    }
+    &:nth-child(6) a{
+      background-position: 5px -286px;
+    }
+  }
+}
 
 
 /****************  footer ********************/
