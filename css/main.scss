@@ -261,6 +261,7 @@ textarea {
 
 .post-item{
   margin-top: 35px;
+  margin-bottom: 20px;
   background-color: #fff;
    border: 1px solid #f0f0f0;
   -webkit-box-sizing: border-box;
@@ -280,7 +281,7 @@ textarea {
   padding: 9px 20px;
   
  &:hover{
-  color: $blue_link;
+  color: #ddd;
  }
  &:active{
    color: $blue_link_active;
@@ -362,8 +363,13 @@ textarea {
 }
  .lates-comments li{
   clear: both;
-  margin-bottom: 15px;
   overflow: hidden;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 15px 0 15px 0;
+  margin: 0;
+  &:last-child{
+    border-bottom: 0;
+  }
 
 }
 .lates-comments time{
@@ -381,6 +387,10 @@ textarea {
 }
 .latest-news{
   clear:both;
+  padding-bottom: 15px;
+}
+aside .latest-news h2{
+  margin-bottom: 0;
 }
 .latest-news time{
    color: #818181;
@@ -395,10 +405,18 @@ textarea {
   line-height: 1.2;
   display: block;
 }
+.latest-news li{
+  border-bottom: 1px solid #d4d4d4;
+  padding: 15px 0 15px 0;
+  margin: 0;
+  &:last-child{
+    border-bottom: 0;
+  }
+  
+}
 .follow-us li{
-  margin-top: -10px;
   width: 70px;
-  height: 60px;
+  height: 50px;
   float: left;
   a{
     display: block;
@@ -420,11 +438,13 @@ textarea {
 }
 .latest-saits{
   clear: both;
+  padding-bottom: 15px;
 }
 .read-all:link, .read-all:visited{
   color: $red_link;
   font-size: 1.4em;
   font-family: Arial, sans-serif;
+  margin-left: 15px;
   &:hover{
     color: $blue_link;
     text-decoration: underline;
@@ -434,7 +454,7 @@ textarea {
   }
 }
 .latest-saits img{
-  border: 2px solid $blue_link;
+  border: 2px solid #e6e6e6;
   &:hover{
     border: 2px solid $red_link;
   }
@@ -462,7 +482,7 @@ aside.col-5{
   margin-top: 35px;
 }
 aside>div{
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 .follow-us{
   overflow: hidden;
@@ -470,23 +490,30 @@ aside>div{
 aside .category,aside .lates-comments,aside .archive,aside .follow-us,aside .latest-news,aside .latest-saits{
   border: 1px solid #eae7e6;
   background-color: #fff; 
-  margin-bottom: 35px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow:   0 0 1px rgba(0,0,0,.1),inset 0 0 1px rgba(0,0,0,.1);
           box-shadow:     0 0 1px rgba(0,0,0,.1),inset 0 0 1px rgba(0,0,0,.1);
   &>ul{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 aside .archive{
   background:#fff url($img_path + 'archive.png') 80% 60% no-repeat;
+  li{
+    text-decoration: underline;
+  }
 }
+
+aside .lates-comments h2{
+  margin-bottom: 0;
+}
+
 aside .category ul{
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 15px;
   li{
     margin: 8px 0;
@@ -508,6 +535,7 @@ aside .category ul{
               transition: all .3s linear;
       &:hover{
         background-color: rgba(255,255,255,.7);
+        color: $blue_link;
       }
     }
     &:nth-child(2) a{
